@@ -1,0 +1,7 @@
+I like dog
+I like snow
+<<<<<<< HEAD
+I like tea very much
+=======
+I don't like snow
+>>>>>>> Alex
