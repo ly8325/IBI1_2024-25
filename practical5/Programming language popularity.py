@@ -12,10 +12,13 @@ plt.xlabel('language')
 plt.ylabel('popularity/%')
 #print the bar plot
 plt.show()
-#
+#create a variable called language to store the input language
 language=input('A programming language')
+#test if the language is in the dictionary
 if language in popularity:
+#attain the value from the dictionary
     users=popularity[language]
+#print the value
     print('The percentage is '+str(users)+'%')
 else:
     print('No data available for the language')
