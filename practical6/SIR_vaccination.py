@@ -21,7 +21,7 @@ for i in range(0,1000):
    susceptible=N-infected-recovered
    infectedlist0.append(infected)
 xlabel=range(0,1001)
-#create a SIR model of ten percent get vaccinated
+#create a SIR model of ten percent get vaccinated and treat vaccinated people as recovered people
 susceptible=8999
 infected=1
 recovered=1000
