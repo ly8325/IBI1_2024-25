@@ -21,14 +21,18 @@ for m in range(0,100):
     #find infected people
     infected=np.where(population==1)
     for i, j in zip(infected[0], infected[1]):
+        #change some infected people to recovered people with the probability of gamma
         if population[i, j] == 1 and np.random.choice(range(2),1,p=[(1-gamma),gamma]).sum()==1:
             new_population[i, j] = 2
             continue
+        #find the neighbors of infected people
         neighbors = get_neighbors(i, j, connectivity=8)
         for x, y in neighbors:
+            #change some susceptible people to infected people with the probability of bata
             if population[x, y] == 0 and np.random.choice(range(2),1,p=[(1-beta),beta]).sum()==1:
                 new_population[x, y] = 1      
     population = new_population
+#draw a figure
 plt.figure(figsize=(6,4),dpi=150)
 cmap = plt.cm.colors.ListedColormap(['purple', 'yellow', 'green'])
 plt.imshow(population,cmap=cmap,interpolation='nearest')
