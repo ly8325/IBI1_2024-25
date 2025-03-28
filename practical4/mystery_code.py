@@ -1,6 +1,6 @@
 # What does this piece of code do?
 # Answer:
-#to calculate how many times of choosing two numbers ramdomly between 1 ane 5 equals to each other 
+#to calculate how many times of choosing two numbers ramdomly between 1 and 5 equals to each other 
 # Import libraries
 # randint allows drawing a random number,
 # e.g. randint(1,5) draws a number between 1 and 5
