@@ -34,6 +34,6 @@ for m in range(0,100):
     population = new_population
 #draw a figure
 plt.figure(figsize=(6,4),dpi=150)
-cmap = plt.cm.colors.ListedColormap(['purple', 'yellow', 'green'])
+cmap = plt.cm.colors.ListedColormap(['purple', 'green', 'yellow'])
 plt.imshow(population,cmap=cmap,interpolation='nearest')
 plt.show()
