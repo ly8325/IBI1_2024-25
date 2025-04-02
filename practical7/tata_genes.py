@@ -6,14 +6,13 @@ b=""
 for line in input:
     line = line.rstrip()
     if '>' in line:
-        if re.search('TATAAAA',b) or re.search('TATAAAT',line) or re.search('TATATAA',line) or re.search('TATATAT',line):
-            a=re.findall(r'gene:(\S+)',header)[0]
-            tata.write(f'>{a}\n{b}\n')
-        header=line 
+        a=re.findall(r'gene:(\S+)',line)[0]
+        if re.search('TATAAAA',b) or re.search('TATAAAT',b) or re.search('TATATAA',b) or re.search('TATATAT',b):
+            tata.write(f'>{a}\n{b}\n') 
         b=""
     else:
         b+=line   
-if re.search('TATAAAA',b) or re.search('TATAAAT',line) or re.search('TATATAA',line) or re.search('TATATAT',line):
+if re.search('TATAAAA',b) or re.search('TATAAAT',b) or re.search('TATATAA',b) or re.search('TATATAT',b):
     a=re.findall(r'gene:(\S+)',line)[0]
     tata.write(f'>{a}\n{b}\n')       
 tata.close()
