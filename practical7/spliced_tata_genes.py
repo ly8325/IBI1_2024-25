@@ -7,12 +7,14 @@ a=""
 for line in genes:
     line = line.rstrip()
     if '>' in line:
+        #create a viable called name to contain gene' name
         name=line
     else:
-        a=line
-        intron=re.findall(r'(?=(da[0:2].+?da[2:4]))',a)
+        #cut intron with given donor and acceptor
+        intron=re.findall(r'(?=(da[0:2].+?da[2:4]))',line)
         instance=0
         for i in range(len(intron)):
+            #calculate the instance number
             if re.search('TATAAAA',intron[i]) or re.search('TATAAAT',intron[i]) or re.search('TATATAA',intron[i]) or re.search('TATATAT',intron[i]):
                 instance+=1
-        file.write(f'{name}  instance number:{instance}\n{a}\n')
+        file.write(f'{name}  instance number:{instance}\n{line}\n')
