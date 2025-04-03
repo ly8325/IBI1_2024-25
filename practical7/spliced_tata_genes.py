@@ -4,6 +4,8 @@ file=open(da+"_spliced_genes.fa", "w")
 genes=open('tata_genes.fa', 'r')
 name=""
 a=""
+#create pattern to cut introns
+pattern = f"{re.escape(da[0:2])}.+?{re.escape(da[2:4])}"
 for line in genes:
     line = line.rstrip()
     if '>' in line:
@@ -11,7 +13,8 @@ for line in genes:
         name=line
     else:
         #cut intron with given donor and acceptor
-        intron=re.findall(r'(?=({da[0:2]}.+{da[2:4]}))',line)
+        intron=re.findall(pattern,line)
+        print(intron)
         instance=0
         for i in range(len(intron)):
             #calculate the instance number
