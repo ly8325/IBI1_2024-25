@@ -14,7 +14,6 @@ for line in genes:
     else:
         #cut intron with given donor and acceptor
         intron=re.findall(pattern,line)
-        print(intron)
         instance=0
         for i in range(len(intron)):
             #calculate the instance number
