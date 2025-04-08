@@ -1,5 +1,5 @@
-class patient (object):
-    def _init_(self,name,age,admission_date,medical_history):
+class patient(object):
+    def __init__(self,name,age,admission_date,medical_history):
         self.name=name
         self.age=age
         self.admission_date=admission_date
