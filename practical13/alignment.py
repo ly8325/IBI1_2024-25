@@ -77,5 +77,3 @@ def main():
     score, identity = calculate_alignment_score(mouse_seq, random_seq)
     print(f"Mouse vs Random:\nAlignment Score: {score}\nPercent Identity: {identity:.2f}%")
     print("="*50)
-if __name__ == "__main__":
-    main()
