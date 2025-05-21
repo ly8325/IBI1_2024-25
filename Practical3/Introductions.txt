@@ -1,4 +1,4 @@
 Hello, my name is Li Yue.
 I like traveling.
 I am enjoying learning knowledge about gitHub.
-I am happy that I can push my repo from Visual Studio Code to GitHub
+I am happy that I can push my repo from Visual Studio Code to GitHub.
