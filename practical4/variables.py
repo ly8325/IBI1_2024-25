@@ -32,3 +32,8 @@ print(W)
 X=not X
 W=X and Y
 print(W)
+#   X   |  Y   |   W   |
+# True  | True | True  |
+# True  | False| False |      
+# False | True | False |
+# False | False| False |
