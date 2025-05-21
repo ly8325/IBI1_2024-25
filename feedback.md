@@ -12,3 +12,5 @@ For week 5:
 I got the feedback that it does not display the dictionary, and when the data in the dictionary changes it will not change on the plot.
 I change the line5 and 6 to two codes: language = list(popularity.keys())
 users = list(popularity.values()) to extract data from the dictionary.
+I got the feedback that it prints the lists but they are not sorted.
+I add a fuction designed by myself to solve the problem.
